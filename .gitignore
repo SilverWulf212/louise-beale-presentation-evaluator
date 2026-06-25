@@ -1,0 +1,7 @@
+# never publish the source talk's transcript (copyright: Louise Beale / TED)
+*.vtt
+*transcript*
+*.mp4
+*.m4a
+__pycache__/
+.DS_Store
