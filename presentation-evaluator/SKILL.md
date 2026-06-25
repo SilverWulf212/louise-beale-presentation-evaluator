@@ -8,9 +8,9 @@ description: >-
   user wants to pressure-test a talk before they give it — e.g. "evaluate my
   presentation," "find the gaps in this keynote," "is this deck ready,"
   "score my speaking script," "where will I fall short on stage," or hands you
-  a deck/outline/transcript and asks what's weak. Trigger it even when the user
-  doesn't say the word "skill" — any request to critique or grade a spoken
-  presentation for impact and delivery should pull this in. Accepts a .pptx,
+  a deck/outline/transcript and asks what's weak. Any request to critique or
+  grade a spoken presentation for impact and delivery should pull this in.
+  Accepts a .pptx,
   .docx, .md, .txt, an outline, or a raw transcript and returns a structured
   scorecard with strengths, gaps, and concrete fixes in a single pass.
 ---
@@ -97,11 +97,11 @@ For each dimension give: the score, one line of **evidence** quoted or
 paraphrased from the actual input (never invent it), the **gap**, and one
 **concrete fix** the speaker can act on today.
 
-Two dimensions cannot be judged from a document — **mark them explicitly as
+A few things cannot be judged from a document — **mark them explicitly as
 "rehearsal-only"** and convert them into a checklist instead of a score:
 real-time pausing, vocal emphasis, body language, and on-stage warmth are
-proven on your feet, not on the page. (This is the part Beale says AI can't do
-for you.)
+proven on your feet, not on the page. They do **not** count toward the scored
+dimensions. (This is the part Beale says AI can't do for you.)
 
 ## Output format
 
@@ -143,9 +143,9 @@ Specific lines/slides to remove or tighten, with why.
 - [ ] Read-aloud pass done; clunky phrases fixed
 ```
 
-In claude.ai (not Claude Code), render this scorecard as a dark/cyber
-interactive artifact (Orbitron + JetBrains Mono, cyan/magenta/amber on
-near-black) instead of raw markdown, per the user's standing preference.
+In claude.ai (not Claude Code), you may render this scorecard as an interactive
+artifact instead of raw markdown if the user prefers it — otherwise emit the
+markdown structure above as-is.
 
 ## Guardrails
 

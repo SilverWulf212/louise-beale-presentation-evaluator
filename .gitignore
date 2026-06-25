@@ -5,3 +5,6 @@
 *.m4a
 __pycache__/
 .DS_Store
+
+# local repo snapshots / backups — never publish
+*.tar
